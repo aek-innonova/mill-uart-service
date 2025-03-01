@@ -1,0 +1,12 @@
+[Unit]
+Description=Mill Service
+
+[Service]
+WorkingDirectory=/home/mill/mill/mill-uart-service
+ExecStart=/home/mill/.nvm/nvm-exec npm run start:dev
+Type=simple
+Restart=always
+User=mill
+
+[Install]
+WantedBy=multi-user.target
